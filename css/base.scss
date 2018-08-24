@@ -1,0 +1,35 @@
+---
+---
+/* --- Variables --- */
+$text-font: sans-serif;
+$title-font: serif;
+
+$primary-color: #333;
+$secondary-color: teal;
+
+html {
+  box-sizing: border-box;
+}
+
+* { 
+  box-sizing: inherit;
+}
+
+body {
+  padding: 0;
+  margin: 0 1.5em;
+  color: $primary-color;
+}
+
+a {
+  text-decoration: none;
+  color: $secondary-color;
+}
+
+@media (min-width: 768px) {
+  body {
+    width: 50em;
+    max-width: 80vw;
+    margin: 0 auto;
+  }
+}

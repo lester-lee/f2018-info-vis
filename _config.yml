@@ -1,0 +1,13 @@
+title: CS397 Information Visualization
+email: lester@lester-lee.com
+description: >- 
+  I will be documenting my independent study CS397 Information Visualization.
+baseurl: ""
+url: "https://www.lester-lee.com"
+
+#Site settings
+excerpt_length: 88
+
+#Build settings
+markdown: kramdown
+permalink: pretty

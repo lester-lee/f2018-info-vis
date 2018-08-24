@@ -1,0 +1,23 @@
+---
+layout: base
+title: Lester Lee | CS397 - Information Visualization
+---
+<section class="PostList">
+  {% for post in site.posts %}
+  <article class="Post">
+    <a href="{{ post.url | prepend: site.baseurl }}">
+      <h2 class="PostTitle">{{ post.title }}</h2>
+      {% if post.subtitle %}
+        <h3 class="PostTitle PostTitle--sub">{{ post.subtitle }}</h3>
+      {% endif %}
+    </a>
+    <div class="PostContent">
+      {{ post.content | strip_html | xml_escape | truncatewords: site.excerpt_length }} 
+      {% assign num_words = post.content | number_of_words %} 
+      {% if num_words > site.excerpt_length %}
+      <a href="{{ post.url | prepend: site.baseurl }}">[Read&nbsp;More]</a>
+      {% endif %}
+    </div>
+  </article>
+  {% endfor %}
+</section>
