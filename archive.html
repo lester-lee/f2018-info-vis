@@ -1,0 +1,13 @@
+---
+layout: base
+title: Archive
+---
+<ul class="Archive">
+  {% for post in site.posts %}
+    <li class="Archive-Item">
+      <a href="{{ post.url | prepend: site.baseurl }}">
+        {{ post.date | date: "%Y %b %d"}} : {{ post.title }}
+      </a>
+    </li>
+  {% endfor %}
+</ul>

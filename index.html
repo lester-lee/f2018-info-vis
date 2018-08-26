@@ -6,7 +6,9 @@ title: Lester Lee | CS397 - Information Visualization
   {% for post in site.posts %}
   <article class="Post">
     <a href="{{ post.url | prepend: site.baseurl }}">
-      <h2 class="PostTitle">{{ post.title }}</h2>
+      <h2 class="PostTitle">{{ post.title }}
+        <span class="PostDate">{{ post.date | date: "%b %d %Y" }}</span>
+      </h2>
       {% if post.subtitle %}
         <h3 class="PostTitle PostTitle--sub">{{ post.subtitle }}</h3>
       {% endif %}
