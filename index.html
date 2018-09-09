@@ -1,6 +1,6 @@
 ---
 layout: base
-title: Lester Lee | CS397 - Information Visualization
+title: CS397 - Information Visualization
 ---
 <section class="PostList">
   {% for post in site.posts %}
@@ -14,8 +14,8 @@ title: Lester Lee | CS397 - Information Visualization
       {% endif %}
     </a>
     <div class="PostContent">
-      {{ post.content | strip_html | xml_escape | truncatewords: site.excerpt_length }} 
-      {% assign num_words = post.content | number_of_words %} 
+      {{ post.content | strip_html | xml_escape | truncatewords: site.excerpt_length }}
+      {% assign num_words = post.content | number_of_words %}
       {% if num_words > site.excerpt_length %}
       <a href="{{ post.url | prepend: site.baseurl }}">[Read&nbsp;More]</a>
       {% endif %}

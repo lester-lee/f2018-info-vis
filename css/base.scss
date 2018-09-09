@@ -1,17 +1,17 @@
 ---
 ---
 /* --- Variables --- */
-$text-font: sans-serif;
-$title-font: serif;
+$text-font: 'Noto Sans', sans-serif;
+$title-font: 'Noto Serif', serif;
 
 $primary-color: #333;
-$secondary-color: rgb(75, 97, 104);
+$secondary-color: rgb(64, 143, 167);
 
 html {
   box-sizing: border-box;
 }
 
-* { 
+* {
   box-sizing: inherit;
 }
 
@@ -19,6 +19,7 @@ body {
   padding: 0;
   margin: 0 1.5em;
   color: $primary-color;
+  font-family: $text-font;
 }
 
 a {
@@ -31,6 +32,15 @@ pre {
   word-wrap: break-word;
 }
 
+img {
+  max-width: 100%;
+}
+
+@for $i from 1 through 6 {
+  h#{$i} {
+    font-family: $title-font;
+  }
+}
 
 /* --- Masthead --- */
 .Masthead {
@@ -52,9 +62,18 @@ pre {
   }
 }
 
+/* --- Post --- */
+.Post {
+  &Date {
+    font-size: .5em;
+    float: right;
+    margin-top: 1em;
+  }
+}
+
 @media (min-width: 768px) {
   body {
-    width: 50em;
+    width: 40em;
     max-width: 80vw;
     margin: 0 auto;
   }
