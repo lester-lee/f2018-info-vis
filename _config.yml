@@ -9,3 +9,4 @@ excerpt_length: 88
 #Build settings
 markdown: kramdown
 permalink: pretty
+future: true

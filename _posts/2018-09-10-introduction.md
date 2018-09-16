@@ -8,16 +8,16 @@ This blog will document my independent study on information visualization. By th
 Information visualization is all about transforming data into visual representations. These visualizations can be used to explore a dataset, to glean information that may not have been readily accessible from the original dataset. Or they can be used to present information to an audience who may not be familiar with the dataset. Visualizations may also be used to confirm ideas about a dataset.[^in-d] Regardless, their purpose is to _communicate_ the data.
 
 Visualizations can look like this:
-![Example of a bar chart](https://datavizproject.com/wp-content/uploads/2015/10/Sk%C3%A6rmbillede-2017-07-18-kl.-09.58.24.png)
+![Example of a bar chart]({{site.baseurl}}/assets/introduction/facebook.png)
 [Source: Facebook](https://www.facebook.com)
 
 or this:
-![Example of a line graph](https://i.gyazo.com/45dbfe2659424894b0d53005c0b52f33.png)
+![Example of a line graph]({{site.baseurl}}/assets/introduction/nytexample.png)
 [Source: New York Times](https://www.nytimes.com/interactive/2018/08/30/climate/how-much-hotter-is-your-hometown.html)
 
 or even this:
 
-![Example of a pie chart](https://i.gyazo.com/102f03db91cee0fa141d1412f35540d7.png)
+![Example of a pie chart]({{site.baseurl}}/assets/introduction/pieexample.png)
 
 These are examples of visualizations that I often encounter, and they raise some valuable questions. What's the purpose of each visualization? What are they trying to communicate? What were the choices involved in making each visualizaton? Are they effective visualizations?
 
@@ -33,11 +33,11 @@ It is important to keep in mind that not every visualization may add the correct
 A visualization may reveal unnoticed trends or patterns in the data that could not have otherwise been discovered. Consider Anscombe's quartet, which are datasets created to illustrate this purpose.[^anscombe] These four scatterplots each contain eleven points and have nearly identical descriptive statistics.
 As pulled from Anscombe's paper:
 
-![Identical descriptive statistics for the quartet](https://i.gyazo.com/2d33b57f5aee84932c99e20d29c5922b.png)
+![Identical descriptive statistics for the quartet]({{site.baseurl}}/assets/introduction/anscombestats.png)
 
 When graphed, however, one can quickly see that they have distinctively different patterns.
 
-![Anscombe's quartet, four scatterplots](https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Anscombe%27s_quartet_3.svg/425px-Anscombe%27s_quartet_3.svg.png)
+![Anscombe's quartet, four scatterplots]({{site.baseurl}}/assets/introduction/anscombe.png)
 
 Though the quartet is artifically created, one can imagine similar situations in which patterns cannot be unveiled from just looking at the numbers, and how visualization can be useful in exploring and analyzing a dataset.
 

@@ -39,7 +39,12 @@ img {
 @for $i from 1 through 6 {
   h#{$i} {
     font-family: $title-font;
+    margin-bottom: 0;
   }
+}
+
+p{
+  margin-top: 0;
 }
 
 /* --- Masthead --- */
