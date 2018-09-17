@@ -34,7 +34,9 @@ Color is a powerful feature that, when used correctly, can lead to very effectiv
 [Color Use Guidelines for Data Representation by Cynthia A. Brewer](http://www.personal.psu.edu/cab38/ColorSch/ASApaper.html) provides a very valuable insight: that we can match attributes of color to attributes of the data that we are trying to represent. The paper gives examples of different types of color schemes, and what kinds of data that they are most suited for. Another very useful piece of information from this paper is:
 > "The following pairs of hues are not confused by people with the most common types of color vision impairments: red-blue, red-purple, orange-blue, orange-purple, brown-blue, brown-purple, yellow-blue, yellow-purple, yellow-gray, and blue-gray."
 
+The mentioned pairs are not necessarily distinguishable for all types of color blindness, but they provide a good starting point when thinking about color schemes and brings the designer's attention to how their color scheme choices can affect their audience. The contrast between colors can be much harder to see for those with color blindness. For example, using red and green as labels for different categories would be very ineffective for those affected by red-green color blindness. When we design our visualizations, we must be thoughtful in our choices.
 
+[Somewhere Over the Rainbow: An Empirical Assessment of Quantitative Colormaps (2018) by Yang Liu and Jeffrey Heer](https://idl.cs.washington.edu/files/2018-QuantitativeColor-CHI.pdf) is a paper that studies the effects of different colormaps on judgments about relative difference. 
 
 ## Tufte Guidelines
 
