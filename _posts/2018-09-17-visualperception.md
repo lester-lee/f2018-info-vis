@@ -71,3 +71,7 @@ The mentioned pairs are not necessarily distinguishable for all types of color-v
 [chroma.js](https://gka.github.io/chroma.js/) is a JavaScript library for working with colors.
 
 [Viz Palette](http://projects.susielu.com/viz-palette) lets designers test colors for different types of visualizations and shows how the colors will seem to those with different types of color-vision deficiency.
+
+[These slides by Miriah Meyer](http://www.cs.utah.edu/~miriah/teaching/cs6630/lectures/L04-data.pdf) touch on a lot of the mentioned themes & topics!
+
+Chapters 5-7 of _The Functional Art_ by Alberto Cairo covers a lot of information about the physiology of the eye and how people perceive visually. Interesting stuff!

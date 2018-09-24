@@ -5,8 +5,9 @@ title: Resources
 Here are links to resources that I have found helpful (in no particular order).
 
 ## Readings
-- [Data Visualization: A practical introduction by Kieran Healy](http://socviz.co/index.html)
-- [Fundamentals of Data Visualization](https://serialmentor.com/dataviz/)
+- [_Data Visualization_: A practical introduction by Kieran Healy](http://socviz.co/index.html)
+- [_Fundamentals of Data Visualization_ by Claus O. Wilke](https://serialmentor.com/dataviz/)
+- [_Visual Display of Quantitative Information_ by Edward Tufte](https://www.edwardtufte.com/tufte/books_vdqi)
 
 ## School Curriculums
 - [Georgia Tech - John Stasko: Information Visualization F2018](https://www.cc.gatech.edu/~stasko/7450/index.html)

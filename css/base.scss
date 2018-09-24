@@ -48,6 +48,12 @@ p{
   margin-top: 0;
 }
 
+sup {
+  vertical-align: baseline;
+  position: relative;
+  top: -0.2em;
+}
+
 /* --- Masthead --- */
 .Masthead {
   text-align: center;
