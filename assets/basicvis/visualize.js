@@ -83,3 +83,42 @@ vbarSvg.append('g')
 vbarSvg.append('g')
        .attr('transform', 'translate(20,10)')
        .call(vYAxis);
+
+/* Line Chart */
+var lmargin = { top: 0, right: 0, bottom: 40, left: 40 },
+    lWidth = 650 - lmargin.left - lmargin.right,
+    lHeight = 300 - lmargin.top - lmargin.bottom;
+
+var lchart = create_svg('.LineChart', lWidth, lHeight)
+             .attr('transform', 'translate('+lmargin.left+ ',0)')
+             .data(data)
+             .enter();
+
+
+var lX = d3.scaleBand()
+           .domain(data)
+           .range([20, lWidth])
+           .paddingInner(.1);
+
+var lY = d3.scaleLinear()
+           .domain([0, 50])
+           .range([lHeight, 0]);
+
+var lXAxis = d3.axisBottom(lX),
+    lYAxis = d3.axisTop(lY);
+
+var line = d3.svg.line()
+        .interpolate('monotone')
+        .x(function(d, i){return x(i);})
+        .y(function(d) {return y(d);});
+
+lchart.append('g')
+        .attr('transform', 'translate(0,' + lHeight + ')')
+        .call(lXAxis);
+
+lchart.append('g')
+        .attr('transform', 'translate(' + lmargin.left + ',0)')
+        .call(lYAxis)
+
+lchart.append('path')
+        .attr('d', line);
