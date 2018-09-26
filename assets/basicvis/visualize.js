@@ -10,7 +10,7 @@ function create_svg(cls, w, h) {
 /* Horizontal Bar*/
 // creating svg
 var hWidth = 600;
-var hHeight = 250;
+var hHeight = 300;
 var hbarSvg = create_svg('.HorizontalBar', hWidth+50, hHeight+50);
 
 // scaling axes
@@ -31,20 +31,23 @@ hbarSvg = hbarSvg.selectAll('rect')
   .data(data)
   .enter();
 
+hbarSvg = hbarSvg.append('g')
+  .attr('transform', 'translate(30, 0)');
+  
 hbarSvg.append('rect')
     .attr('height', function(d){ return hY.bandwidth();})
     .attr('width', function(d){return hX(d);})
     .attr('fill', '#408fa7')
     .attr('x', 0)
     .attr('y', function(d,i){return hY(d)})
-    .attr('transform', 'translate(20, 0)');
+    .attr('transform', 'translate(30, 0)');
 
 hbarSvg.append('g')
-       .attr('transform', 'translate(20,'+ hHeight +')')
+       .attr('transform', 'translate(30,'+ hHeight +')')
        .call(hXAxis);
 
 hbarSvg.append('g')
-       .attr('transform', 'translate(20, 0)')
+       .attr('transform', 'translate(30, 0)')
        .call(hYAxis);
 
 /* Vertical Bar */
@@ -75,50 +78,53 @@ vbarSvg.append('rect')
       .attr('y', function (d) {
           return vY(d)
         })
-      .attr('transform', 'translate(0,10)');
+      .attr('transform', 'translate(10,10)');
 
 vbarSvg.append('g')
-       .attr('transform', 'translate(0,' + (vHeight+10) + ')')
+       .attr('transform', 'translate(10,' + (vHeight+10) + ')')
        .call(vXAxis);
 vbarSvg.append('g')
-       .attr('transform', 'translate(20,10)')
+       .attr('transform', 'translate(30,10)')
        .call(vYAxis);
 
 /* Line Chart */
-var lmargin = { top: 0, right: 0, bottom: 40, left: 40 },
+// 8. An array of objects of length N. Each object has key -> value pair, the key being "y" and the value is a random number
+var dataset = d3.range(20).map(function (i) { return { "y": data[i] } })
+
+var lmargin = { top: 10, right: 0, bottom: 40, left: 40 },
     lWidth = 650 - lmargin.left - lmargin.right,
-    lHeight = 300 - lmargin.top - lmargin.bottom;
+    lHeight = 400 - lmargin.top - lmargin.bottom;
 
-var lchart = create_svg('.LineChart', lWidth, lHeight)
-             .attr('transform', 'translate('+lmargin.left+ ',0)')
-             .data(data)
-             .enter();
+var lchart = create_svg('.LineChart', 650, 400);
 
+var lg = lchart.append('g')
+  .attr('transform', 'translate(' + lmargin.left + ',' + lmargin.top +')');
 
-var lX = d3.scaleBand()
-           .domain(data)
-           .range([20, lWidth])
-           .paddingInner(.1);
+var lX = d3.scaleLinear()
+           .domain([0,19])
+           .range([0, lWidth]);
 
 var lY = d3.scaleLinear()
-           .domain([0, 50])
+           .domain([0,50])
            .range([lHeight, 0]);
 
 var lXAxis = d3.axisBottom(lX),
-    lYAxis = d3.axisTop(lY);
+    lYAxis = d3.axisLeft(lY);
 
-var line = d3.svg.line()
-        .interpolate('monotone')
-        .x(function(d, i){return x(i);})
-        .y(function(d) {return y(d);});
+var line = d3.line()
+        .x(function(d, i){return lX(i);})
+        .y(function(d) {return lY(d.y);})
+        .curve(d3.curveMonotoneX);
 
 lchart.append('g')
-        .attr('transform', 'translate(0,' + lHeight + ')')
+        .attr('transform', 'translate(40,' + (lHeight + 10) + ')')
         .call(lXAxis);
+lg.append('g')
+        .call(lYAxis);
 
-lchart.append('g')
-        .attr('transform', 'translate(' + lmargin.left + ',0)')
-        .call(lYAxis)
-
-lchart.append('path')
+lg.append('path')
+        .datum(dataset)
+        .attr('stroke', '#408fa7')
+        .attr('stroke-width', 1.5)
+        .attr('fill', 'none')
         .attr('d', line);
