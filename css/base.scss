@@ -35,6 +35,8 @@ pre {
 
 img {
   max-width: 100%;
+  display: block;
+  margin: 0 auto;
 }
 
 @for $i from 1 through 6 {
@@ -52,6 +54,17 @@ sup {
   vertical-align: baseline;
   position: relative;
   top: -0.2em;
+}
+
+table {
+  min-width: 50%;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #aaa;
+  padding: .3em;
 }
 
 /* --- Masthead --- */
