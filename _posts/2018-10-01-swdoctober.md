@@ -28,3 +28,10 @@ The scatterplot may be more informative if there were more income brackets, but 
 ![Violin plot for the same data]({{site.baseurl}}/assets/october-swd/income-debt-violin.png)
 
 Violin plots show a lot more information about the dataset than the scatterplots. Here, the intuition is that the distributions of median cumulative debt between different income brackets aren't that different! This intuition can be confirmed by running statistical tests on the dataset, but these visualizations do make me want to rethink my initial assumption: that the lower income bracket would have higher median debt.
+
+This may mean that overall, colleges are doing a good job of providing financial aid to students that need it, as it seems that students end up borrowing similar amounts of money regardless of their income level. It is important to note that these visualizations show distributions of medians. Each data point is median debt for a particular institution. As a result, we are seeing a summarization of summarizations. Perhaps it would be more enlightening to analyze the relationship between student household income and cumulative debt for individual instutions. The Department of Education also acknowledges that most of their data comes from students who receive federal grants and loans, which is likely to skew the data.
+
+What's also shocking is that these charts suggest that most undergraduate students are graduating thousands, if not tens of thousands, of dollars in debt! That's so much money! This is a small part of a much larger discussion on the price of higher education in the United States.
+
+## Resources
+[Reading violin plots + examples](https://blog.modeanalytics.com/violin-plot-examples/)
