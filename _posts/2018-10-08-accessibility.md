@@ -20,16 +20,12 @@ Here is another [POUR article, by Andrew Smyk](https://theblog.adobe.com/design-
 
 [Google's Material Design guidelines has a section on accessibility](https://material.io/design/usability/accessibility.html). It contains useful guidelines to follow.
 
-## Visual Accessibility
+## More Specific Guidelines
 I went in-depth on using more accessible color choices in [a previous post on visual perception]({{site.baseurl}}/2018/09/17/visualperception/), but color choice is not the only thing that can be improved. 
 
 Make things bigger! Provide alternative formats!
 
-Wherever text is involved, font choice is important!
-
-[Penn State University](http://accessibility.psu.edu/legibility/fontface/) gives some recommendations for accessible fonts to use, along with notes on what contexts each font would be appropriate in.
-
-[The Bureau of Internet Accessibility](https://www.boia.org/blog/best-fonts-to-use-for-website-accessibility) also recommends some fonts and advocates for clean, simple fonts without flourishes.
+The message of a visualization should be clear! If there are multiple messages, consider using multiple visualizations and guiding the audience through each one. Making one complex and cluttered visualization is not a good idea.
 
 Visualizations can be very difficult for screen readers to process, and not all the information is always contained within the alt-text for images. It is good to provide the data in a screen-reader friendly, but it would be better to make a single accessible chart, since it takes less effort than making multiple versions, and is easier to maintain.
 
@@ -39,15 +35,14 @@ Visualizations can be very difficult for screen readers to process, and not all 
 
 [This article by Graeme Fulton](https://webdesign.tutsplus.com/articles/accessibility-basics-designing-for-visual-impairment--cms-27634) provides good tips for making accessible designs. Texture differences instead of color differences are much easier to identify!
 
-## Operable
-This is more relevant for interactive information visualizations.
+If the visualization is interactive, make sure that the signifiers are clear and legible. The touch-able / click-able parts should be large enough to be easily clicked (around 45x45 px), and spaced far apart enough so that viewers don't misclick. Is there enough feedback for viewers to know what changed when they interact with the visualization? Are viewers aware that they can interact with the visualization? Are they enticed to interact? 
 
-## Understandable
-The message of a visualization should be clear! If there are multiple messages, consider using multiple visualizations and guiding the audience through each one. Making one complex and cluttered visualization is not a good idea.
+### Text
+Wherever text is involved, font choice is important!
 
+[Penn State University](http://accessibility.psu.edu/legibility/fontface/) gives some recommendations for accessible fonts to use, along with notes on what contexts each font would be appropriate in.
 
-
-## Robust
+[The Bureau of Internet Accessibility](https://www.boia.org/blog/best-fonts-to-use-for-website-accessibility) also recommends some fonts and advocates for clean, simple fonts without flourishes.
 
 
 ## Misc / Resources
