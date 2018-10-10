@@ -44,7 +44,6 @@ Wherever text is involved, font choice is important!
 
 [The Bureau of Internet Accessibility](https://www.boia.org/blog/best-fonts-to-use-for-website-accessibility) also recommends some fonts and advocates for clean, simple fonts without flourishes.
 
-
 ## Misc / Resources
 [This article by Sara Hendren](https://www.wired.com/2014/10/all-technology-is-assistive/) discusses how all technology is meant to assist and gives examples of designs that engage the concept of "normality". [Sara Hendren](https://sarahendren.com/talks-plus-essays/) has more cool pieces!
 
