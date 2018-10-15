@@ -2,7 +2,11 @@
 layout: post
 title: Evaluation
 ---
+> Overall takeaway from the following readings: get a good understanding of the problem domain and the goal of the visualization. Heuristics are a good way of evaluating prototypes, but they are not sufficient; ideally, conducting ethnographic research with the end users or audience provides the clearest idea of how good the visualization is.
+
 [Information Visualization Heuristics in Practical Expert Evaluation (Väätäjä et. al 2016)](https://dl.acm.org/citation.cfm?doid=2993901.2993918) looks at the application of 10 information visualization heuristics from prior research and suggests three additional heuristics. They provide the heuristics as well as the questions that participants were asked in evaluating the usefulness of the heuristics.
+
+[Heuristics for information visualization evaluation (Zuk et. al 2006)](https://dl.acm.org/citation.cfm?id=1168162) performs a meta-analysis on the selection, organization, and using of heuristics. They provide and compare three different sets of heuristics for a single visualization: both the issues identified and also the direction of suggested solutions. They find some characteristics to look for when comparing different heuristics. This is useful for when thinking about which heuristics to use.
 
 [Knowledge Precepts for Design and Evaluation of Information Visualizations (Amar & Stasko, 2005)](https://www.cc.gatech.edu/~john.stasko/papers/tvcg05.pdf) looks at how limitations in information visualization systems result in analytic gaps between the systems and higher-level analysis tasks such as learning and decision-making; more specifically: the _Worldview Gap_ (what is shown vs. what should actually be shown) and the _Rationale Gap_ (perceiving a relatioinship vs. understanding the usefulness of the relationship). The paper suggests three ways to narrow each gap.
 
@@ -20,3 +24,5 @@ Multi-dimensional In-depth Long-term Case Studies (Shneiderman & Plaisant 2006)]
 [VizItCards: A Card-Based Toolkit for Infovis Design Education (He & Adar: IEEE Vis 2016)](http://cond.org/vizitcards.pdf) discusses a card-based workshop to be used in teaching infovis. They specific the learning goals they consider, as well as which aspects of design that the cards can be used to support.
 
 [Creative User-Centered Visualization Design for Energy Analysts and Modelers](http://openaccess.city.ac.uk/2618/5/Goodwin-preprint.pdf) discusses techniques that deliberately promote creativity in contexts of design problems where the data is relatively unknown and the needs are not well understood.
+
+[Evaluation of Semantic Fisheye Zooming to Provide Focus+Context (Afram et. al 2007)](http://www.cs.tufts.edu/%7Ejacob/papers/afram.hfes.pdf) is a study on the effectiveness of semantic fisheye zooming on a concept map, which is a graph where nodes are individual concepts and edges are relationships. Participants were asked several questions that tested their understanding and recall of the concept map, and results suggest that semantic fisheye zooming is useful.
