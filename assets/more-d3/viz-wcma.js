@@ -1,0 +1,8 @@
+$(function(){
+
+  //Artwork Classification Count
+  
+
+
+
+});
