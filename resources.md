@@ -17,3 +17,7 @@ Here are links to resources that I have found helpful (in no particular order).
 - [University of Utah - Alexander Lex: Visualization for Data Science F2018](http://dataviscourse.net)
 - [Harvard - Alexander Lex: Visualization S2015](http://www.cs171.org/2015/schedule/)
 - [University of Washington - Jeffrey Heer: Data Visualizaton S2018](https://courses.cs.washington.edu/courses/cse512/18sp/#schedule)
+
+## Datasets
+ - [Awesome Public Datasets](https://github.com/awesomedata/awesome-public-datasets)
+ - [Storytelling with Data public data sources](https://docs.google.com/document/d/1Ads4XsCjXmDrdGRgfmm_OgRdpFcl6Qhs6SOllNGyq7Y/edit)
