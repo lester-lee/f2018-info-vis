@@ -16,6 +16,8 @@ Another quality that may be helpful is how bright or dark an image is. We can me
 We can also use luminance to calculate the contrast of an image, since contrast is the difference in luminance between two objects. I will not be doing feature detection in these thumbnails (perhaps in the future), so I cannot compare the difference between the image feature and the background (Weber contrast). Instead, I will be calculating the Michelson contrast for each thumbnail.
 > C = (Lmax - Lmin) / (Lmax + Lmin)
 
+This is not the best measure, as any image with both black and white present will have maximum contrast, regardless of the ratio of dark to light in the thumbnail. There are more sophisticated ways to measure contrast, and I may delve deeper into implementing these in the future.
+
 ## References
 [^brightness]: [Information Display by Charles P. Halsted](http://crompton.com/light/index.html)
 [^pb]: [Discussion on different measures of brightness](http://www.nbdtech.com/Blog/archive/2008/04/27/Calculating-the-Perceived-Brightness-of-a-Color.aspx)
