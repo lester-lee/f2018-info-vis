@@ -4,7 +4,7 @@ title: Processing WCMA Thumbnails
 ---
 As mentioned in the previous post, I want to start getting more information about the visual properties of artworks in the WCMA collection. The [WCMA collection](https://github.com/wcmaart/collection) includes a set of thumbnails that I will be processing. Not every object in the collection has a thumbnail, but I will be able to learn more about the objects that do have thumbnails.
 
-I will be using [OpenCV](https://opencv.org/) to process the images.
+I will be using [OpenCV](https://opencv.org/) to process the images. My code is available [on Github](https://github.com/lester-lee/wcma-viz); specifically, [`get_color_details.py`](https://github.com/lester-lee/wcma-viz/blob/master/get_color_details.py).
 
 ## Color
 One visual quality is color. My initial intuition is to get the "average" color of each thumbnail, but that may not be a very useful metric for pieces that are not monochromatic; [a reply on this Stack Overflow post](https://stackoverflow.com/questions/43111029/how-to-find-the-average-colour-of-an-image-in-python-with-opencv) talks more in-depth about why it may be better to calculate the _dominant_ colors in an image. We can use _k-means clustering_ to get the _k_ most representative colors for each thumbnail. This is essentially color quantization, or reducing the number of colors in an image. Taking the most representative color using this method would still be a little more helpful than taking the RGB vector composed of means of each color channel; the post gives an example of how this "average" ends up meaningless in relation to the original image. If the picture is monochrome, then the two values will be very similar, and if the picture isn't monochrome, then the average doesn't make much sense. OpenCV provides a [tutorial on using k-means clustering for color quantization](https://docs.opencv.org/3.0-beta/doc/py_tutorials/py_ml/py_kmeans/py_kmeans_opencv/py_kmeans_opencv.html).
@@ -17,6 +17,20 @@ We can also use luminance to calculate the contrast of an image, since contrast 
 > C = (Lmax - Lmin) / (Lmax + Lmin)
 
 This is not the best measure, as any image with both black and white present will have maximum contrast, regardless of the ratio of dark to light in the thumbnail. There are more sophisticated ways to measure contrast, and I may delve deeper into implementing these in the future.
+
+## Meta-analysis
+Now that I have generated the mentioned attributes for each piece in the collection with a thumbnail, I can look at trends in these attributes for the collection as a whole.
+
+For color, I want to see what the dominant colors of the collection are; by putting all the dominant colors of each piece into a single array, I can effectively treat the array as an image, and do another color quantization to get the top 10 colors of the collection.
+For future visualizations, it may also be fun to visualize the RGB distribution of the colors.
+
+
+
+For luminance and contrast, which are single numbers, a histogram or box plot would tell me the most about the distribution of values in the collection.
+
+![Violin plot of luminance distribution]({{site.baseurl}}/assets/visualprocessing/luminance.png)
+
+![Violin plot of contrast distribution]({{site.baseurl}}/assets/visualprocessing/contrast.png)
 
 ## References
 [^brightness]: [Information Display by Charles P. Halsted](http://crompton.com/light/index.html)
