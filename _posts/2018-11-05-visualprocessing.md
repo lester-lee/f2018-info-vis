@@ -19,18 +19,47 @@ We can also use luminance to calculate the contrast of an image, since contrast 
 This is not the best measure, as any image with both black and white present will have maximum contrast, regardless of the ratio of dark to light in the thumbnail. There are more sophisticated ways to measure contrast, and I may delve deeper into implementing these in the future.
 
 ## Meta-analysis
-Now that I have generated the mentioned attributes for each piece in the collection with a thumbnail, I can look at trends in these attributes for the collection as a whole.
+Now that I have generated the mentioned attributes for each piece in the collection with a thumbnail, I can look at trends in these attributes for the collection as a whole. The code can be found at [`analyze_color_details.py`](https://github.com/lester-lee/wcma-viz/blob/master/analyze_color_details.py). I used [Seaborn](https://seaborn.pydata.org/) to make the following plots.
 
 For color, I want to see what the dominant colors of the collection are; by putting all the dominant colors of each piece into a single array, I can effectively treat the array as an image, and do another color quantization to get the top 10 colors of the collection.
 For future visualizations, it may also be fun to visualize the RGB distribution of the colors.
-
-
+<style>
+  .Circles{
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+  }
+  .Circle{
+    border-radius:50%;
+    width: 50px;
+    height: 50px;
+    margin: 0 5px;
+  }
+</style>
+<ul class="Circles">
+<li class="Circle" style="background:#798c98"></li>
+<li class="Circle" style="background:#8a8173"></li>
+<li class="Circle" style="background:#151412"></li>
+<li class="Circle" style="background:#ada08c"></li>
+<li class="Circle" style="background:#ba6432"></li>
+<li class="Circle" style="background:#6d6152"></li>
+<li class="Circle" style="background:#4d453d"></li>
+<li class="Circle" style="background:#ebe8e3"></li>
+<li class="Circle" style="background:#cfc7b8"></li>
+<li class="Circle" style="background:#312c28"></li>
+</ul>
+<br>
+As shown above, it seems beige/brown are the most dominant colors in the collection!
 
 For luminance and contrast, which are single numbers, a histogram or box plot would tell me the most about the distribution of values in the collection.
 
 ![Violin plot of luminance distribution]({{site.baseurl}}/assets/visualprocessing/luminance.png)
 
+The luminance values seem to be well-distributed; there are a decent amount of light and dark pieces, and the median luminance value is around 150. Luminance here is measured on a scale of 0 to 255, and scales linearly.
+
 ![Violin plot of contrast distribution]({{site.baseurl}}/assets/visualprocessing/contrast.png)
+
+The distribution of contrast values is heavily skewed toward high-contrast, and this seems to be a result of the problem mentioned before: that any piece with a single white pixel and a single dark pixel will have a high contrast; this problem can be alleviated by using different contrast measures and also by doing feature detection on the thumbnails to try to get at a foreground/background contrast measure.
 
 ## References
 [^brightness]: [Information Display by Charles P. Halsted](http://crompton.com/light/index.html)
